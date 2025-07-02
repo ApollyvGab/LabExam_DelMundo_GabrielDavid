@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2>Welcome, <span>Gab</span>!</h2>
+    <p>You have successfully logged in.</p>
+  </div>
+
+  <script>
+    const user = localStorage.getItem("loggedInUser");
+    if (!user) {
+      window.location.href = "index.html"; // Redirect if not logged in
+    } else {
+      document.getElementById("displayUser").textContent = user;
+    }
+  </script>
+</body>
+</html>
