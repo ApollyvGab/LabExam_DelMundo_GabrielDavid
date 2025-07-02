@@ -6,6 +6,18 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- ✅ Static Navbar -->
+  <nav class="navbar">
+    <div class="nav-brand"></div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Settings</a></li>
+    </ul>
+  </nav>
+
+  <!-- ✅ Main Content -->
   <div class="login-container">
     <h2>Welcome, <span>Gab</span>!</h2>
     <p>You have successfully logged in.</p>
@@ -14,7 +26,7 @@
   <script>
     const user = localStorage.getItem("loggedInUser");
     if (!user) {
-      window.location.href = "index.html"; // Redirect if not logged in
+      window.location.href = "index.html";
     } else {
       document.getElementById("displayUser").textContent = user;
     }
